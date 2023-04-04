@@ -1,0 +1,13 @@
+Tomando lo realizado en la Actividad 1 se solicita:
+
+Cuando ya esén todos los datos cargados, preguntarle al usuario si desea modificar alguna posición del arreglo.
+
+Si el usuario requiere modificar un dato, debemos mostrar todos los datos del array y pedirle al usuario que ingrese la posición del dato que quiere modificar.
+Una vez indicada la posición del dato debemos pedirle el nuevo valor y actualizar nuestro array.
+Cuando el array esté actualizado, debemos volver a preguntarle al usuario si desea modificarlo.
+El usuario podrá modificar los datos la cantidad de veces que desee mientras que responda de forma afirmativa la pregunta.
+
+Cuando el usuario ya no desee modificar los datos mostraremos el array final de 3 diferentes maneras:
+Imprimiendo la posición y el valor de los datos.
+Imprimiendo al suma total de los datos ingresados.
+Imprimiendo la media (promedio) de los datos ingresados.

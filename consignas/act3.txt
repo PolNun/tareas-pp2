@@ -1,0 +1,21 @@
+Tomando como base la Actividad 2 se requiere:
+
+Agregar un un nuevo array de mismo tamaño que el indicado por el usuario, pero completarlo con números enteros
+aleatorios entre el 0 y el 100. Tener en cuenta las siguientes consideraciones:
+
+Debe generarse antes que el usuario cargue los datos de su propio array.
+No debe contener números repetidos.
+
+Una vez que el usuario termino de ingresar y editar los datos, el programa debe validar que en el array del usuario
+no haya datos repetidos, de ser así debe solicitarle que los modifique.
+
+Cuando el Array del usuario esté validado (no contiene números repetidos) el programa debe validar si todos los números
+ingresados se corresponden con los números calculados en "nuestro Array".
+
+Si todos los números coinciden el programa debe mostrar por consola una alerta de juego Ganado, imprimiendo los
+dos Arrays por completo.
+
+Si no coinciden todos los números:
+mostrar la cantidad de coincidencias (números que coinciden entre las dos listas)
+mostrar los números ingresados por el usuario que no se corresponden con un número calculado
+permitirle al usuario volver a editar su array y repetir el proceso de verificación.

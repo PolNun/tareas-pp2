@@ -1,0 +1,21 @@
+Se requiere un programa que permita crear un array de tamaño n en donde:
+
+El usuario pueda ingresar el tamaño del array.
+Una vez creado el array, el usuario pueda completarlo con números enteros.
+Cuando el arreglo esté completo Mostrar por consola el índice y el valor que le corresponde.
+
+Ejemplo de resultado esperado:
+
+Hola, ingresa la cantidad de numeros que deseas:
+5
+Ingrese un numero para la posicion 0: 5
+Ingrese un numero para la posicion 1: 6
+Ingrese un numero para la posicion 2: 1
+Ingrese un numero para la posicion 3: 2
+Ingrese un numero para la posicion 4: 3
+Sus numeros son:
+Posicion 0 numero 5
+Posicion 1 numero 6
+Posicion 2 numero 1
+Posicion 3 numero 2
+Posicion 4 numero 3
