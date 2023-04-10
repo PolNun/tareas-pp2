@@ -41,7 +41,7 @@ public class ActividadTres {
         while (continuar) {
             System.out.println("¿Deseás modificar algún número? (s/n)");
             String respuesta = scanner.next();
-            if (respuesta.equals("s")) {
+            if (respuesta.equalsIgnoreCase("s")) {
                 System.out.println("Estos son los números:");
                 for (int i = 0; i < n; i++) {
                     System.out.printf("Posición %d número %d\n", i, numeros[i]);
@@ -55,6 +55,25 @@ public class ActividadTres {
                 continuar = false;
             }
         }
+
+        do {
+            continuar = false;
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < i; j++) {
+                    if (numeros[i] == numeros[j]) {
+                        System.out.println("Ingresaste un número repetido.");
+                        for (int k = 0; k < n; k++) {
+                            System.out.printf("Posición %d número %d\n", k, numeros[k]);
+                        }
+                        System.out.println("Por favor ingresá otro número para la posición " + i);
+                        numeros[i] = scanner.nextInt();
+                        continuar = true;
+                        break;
+                    }
+                }
+                if (continuar) break;
+            }
+        } while (continuar);
 
         System.out.println("Los números finales son:");
         for (int i = 0; i < n; i++) {
