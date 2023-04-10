@@ -1,24 +1,56 @@
 package actividades;
 
-public class ActividadDos {
-    public static int[] modificarArreglo(int posicion, int nuevoValor, int[] numeros) {
-        numeros[posicion] = nuevoValor;
-        return numeros;
-    }
+import java.util.Scanner;
 
-    public static int sumarElementos(int[] numeros) {
+public class ActividadDos {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresá la cantidad de números que deseás:");
+        int n = scanner.nextInt();
+        int[] numeros = new int[n];
+
+        for (int i = 0; i < n; i++) {
+            System.out.printf("Ingresá un número para la posición %d: ", i);
+            numeros[i] = scanner.nextInt();
+        }
+
+        System.out.println("Los números son:");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("Posición %d número %d\n", i, numeros[i]);
+        }
+
+        boolean continuar = true;
+        while (continuar) {
+            System.out.println("¿Deseás modificar algún número? (s/n)");
+            String respuesta = scanner.next();
+            if (respuesta.equals("s")) {
+                System.out.println("Estos son los números:");
+                for (int i = 0; i < n; i++) {
+                    System.out.printf("Posición %d número %d\n", i, numeros[i]);
+                }
+                System.out.println("Ingresá la posición del número que deseás modificar:");
+                int posicion = scanner.nextInt();
+                System.out.println("Ingresá el nuevo valor:");
+                int valor = scanner.nextInt();
+                numeros[posicion] = valor;
+            } else {
+                continuar = false;
+            }
+        }
+
+        System.out.println("Los números finales son:");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("Posición %d número %d\n", i, numeros[i]);
+        }
+
         int suma = 0;
-        for (int i = 0; i < numeros.length; i++) {
+        for (int i = 0; i < n; i++) {
             suma += numeros[i];
         }
-        return suma;
-    }
+        System.out.println("La suma de los números es: " + suma);
 
-    public static float mediaElementos(int[] numeros) {
-        float media = 0;
-        for (int i = 0; i < numeros.length; i++) {
-            media += numeros[i];
-        }
-        return media / numeros.length;
+        double promedio = (double) suma / n;
+        System.out.println("El promedio de los números es: " + promedio);
     }
 }
