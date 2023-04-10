@@ -64,6 +64,7 @@ public class ActividadTres {
                         System.out.println("Ingresaste un número repetido.");
                         for (int k = 0; k < n; k++) {
                             System.out.printf("Posición %d número %d\n", k, numeros[k]);
+                            System.out.println(numerosRandom[k]);
                         }
                         System.out.println("Por favor ingresá otro número para la posición " + i);
                         numeros[i] = scanner.nextInt();
@@ -75,7 +76,31 @@ public class ActividadTres {
             }
         } while (continuar);
 
-        System.out.println("Los números finales son:");
+        int cantidadCoincidencias = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (numeros[i] == numerosRandom[j]) {
+                    cantidadCoincidencias++;
+                }
+            }
+        }
+
+        if (cantidadCoincidencias > 0 && cantidadCoincidencias < n) {
+            System.out.println("\nNo ganaste, pero te salvaste :)");
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < n; j++) {
+                    if (numeros[i] == numerosRandom[j]) {
+                        System.out.println("El número " + numeros[i] + " coincide con el número " + numerosRandom[j]);
+                    }
+                }
+            }
+        } else if (cantidadCoincidencias == n) {
+            System.out.println("\nGanaste :D");
+        } else {
+            System.out.println("\nPediste :(");
+        }
+
+        System.out.println("\nLos números finales son:");
         for (int i = 0; i < n; i++) {
             System.out.printf("Posición %d número %d\n", i, numeros[i]);
         }
@@ -84,9 +109,9 @@ public class ActividadTres {
         for (int i = 0; i < n; i++) {
             suma += numeros[i];
         }
-        System.out.println("La suma de los números es: " + suma);
+        System.out.println("\nLa suma de los números es: " + suma);
 
         double promedio = (double) suma / n;
-        System.out.println("El promedio de los números es: " + promedio);
+        System.out.println("\nEl promedio de los números es: " + promedio);
     }
 }
